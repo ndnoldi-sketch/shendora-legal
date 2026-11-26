@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<title>Shendora</title>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), uuid = /^[0-9a-f-]{36}$/i;
+  var t = q.get("p") ? "p" : (q.get("l") ? "l" : null), id = t ? q.get(t) : null;
+  location.replace(t && id && uuid.test(id) ? "https://shendora.app/" + t + "/" + id.toLowerCase() : "https://shendora.app/");
+})();
+</script>
+</head>
+<body><p><a href="https://shendora.app/">shendora.app</a></p></body>
+</html>
